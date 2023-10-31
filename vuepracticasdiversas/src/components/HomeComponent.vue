@@ -1,16 +1,12 @@
 <template>
     <div>
-        <h2>Home Component</h2>
+        <h1>Home</h1>
         <img :style="{width: '250px', height: '250px'}" src="./../assets/images/home.jpg" />
     </div>
 </template>
 
 <script>
-export default {
-    name: "HomeComponent"
-}
+    export default {
+        name: "HomeComponent"
+    }
 </script>
-
-<style>
-    @import './../assets/css/estilos.css';
-</style>

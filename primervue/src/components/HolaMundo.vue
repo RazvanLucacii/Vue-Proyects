@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Mi primera App VUE</h1>
+        <h1></h1>Mi primera App VUE</h1>
         <img src="./../assets/images/home.jpg" style="width:150px; height: 150px; " />
         <h2>
             Su nombre es:

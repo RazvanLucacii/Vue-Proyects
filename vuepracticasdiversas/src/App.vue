@@ -11,12 +11,10 @@
 <script>
 import MenuComponent from './components/MenuComponent.vue';
 
-
 export default {
   name: 'App',
   components: {
-    MenuComponent
-    
+    MenuComponent,
   }
 }
 </script>
