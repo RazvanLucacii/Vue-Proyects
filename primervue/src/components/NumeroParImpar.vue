@@ -14,9 +14,6 @@
             Número IMPAR: {{numPar}}
         </h3>
         <div v-html="html"></div>
-        <h2>
-            Número {{numPar}}
-        </h2>
     </div>
 </template>
 <script>

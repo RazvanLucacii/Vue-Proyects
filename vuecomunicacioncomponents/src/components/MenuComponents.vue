@@ -5,10 +5,13 @@
                 <router-link to="/">Home</router-link>
             </li>
             <li>
-                <router-link to="/collatz">Collatz</router-link>
+                <router-link to="/deporte">Deporte</router-link>
             </li>
             <li>
-                <router-link to="/multiplicar">Tabla Multiplicar</router-link>
+                <router-link to="/suma">Sumar</router-link>
+            </li>
+            <li>
+                <router-link to="/comic">Comics</router-link>
             </li>
         </ul>
     </div>
@@ -16,11 +19,12 @@
 
 <script>
     export default {
-        name: "MenuComponent"
+        name:"MenuComponent"
     }
+
 </script>
 
-<style>
+<style> 
     ul#menu li {
         display: inline
         
