@@ -1,21 +1,16 @@
 <template>
-  <MenuComponents />
-  <hr/>
-  <MenuTabla />
-  <hr/>
+  <div>
+    <CochesComponent />
+  </div>
 </template>
 
 <script>
-import MenuComponents from './components/MenuComponents.vue';
-import MenuTabla from './components/MenuTabla.vue';
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import CochesComponent from './components/CochesComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    MenuComponents,
-    MenuTabla
+    CochesComponent,
   }
 }
 </script>

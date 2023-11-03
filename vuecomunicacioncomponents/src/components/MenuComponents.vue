@@ -13,6 +13,18 @@
             <li>
                 <router-link to="/comic">Comics</router-link>
             </li>
+            <li>
+                <router-link to="/select">Select</router-link>
+            </li>
+            <li>
+                <router-link to="/numeroDoble/65">Numero Doble 65</router-link>
+            </li>
+            <li>
+                <router-link to="/numeroDoble/200">Numero Doble 200</router-link>
+            </li>
+            <li>
+                <router-link to="/numeroDoble">Numero Doble SIN</router-link>
+            </li>
         </ul>
     </div>
 </template>
