@@ -41,7 +41,7 @@ const service = new ServiceDepartamentos();
         methods:{
             crearDepartamento(){
                 service.crearDepartamento(this.departamento).then(result =>{
-                    console.log(result)
+                    console.log(result);
                     this.mensaje = "Insertado correctamente";
                     this.$router.push("/departamentos");
                 })

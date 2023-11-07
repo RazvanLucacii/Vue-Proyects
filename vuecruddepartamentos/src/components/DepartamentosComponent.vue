@@ -23,6 +23,9 @@
                     <router-link class="btn btn-primary" :to="'/update/' + dept.idDepartamento">
                         Modificar
                     </router-link>
+                    <router-link class="btn btn-danger" :to="'/delete/' + dept.idDepartamento">
+                        Delete
+                    </router-link>
                 </td>
             </tr>
         </tbody>
