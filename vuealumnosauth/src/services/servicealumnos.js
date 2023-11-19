@@ -1,21 +1,42 @@
 import axios from 'axios';
 import Global from '@/Global';
-import ServiceAuth from './serviceauth';
-const service = new ServiceAuth;
 
 export default class ServiceAlumnos {
-    getAlumnos(){
-        return new Promise(function(resolve) {
-            var request = "api/alumnos/alumnostoken";
+    token = localStorage.getItem('token');
+
+    getAlumnosConToken(token, id) {
+        return new Promise(function(resolve){
+            console.log(token);
+            try {
+                var request = "api/alumnos/findalumnotoken/" + id;
+                var url = Global.apiUrls + request;
+                var alumno = {};
+                axios.get(url, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `bearer ${token}`,
+                    },
+                }).then(response =>{
+                    alumno = response.data;
+                    resolve(alumno);
+                })
+            } catch (error) {
+                console.error('Error al obtener alumnos con token:', error);
+            }
+        })
+    }
+
+    updateAlumno(token, alumno){
+        return new Promise(function(resolve){
+            var request = "api/alumnos/updatealumnotoken";
             var url = Global.apiUrls + request;
-            var alumnos = [];
-            axios.get(url, {
+            axios.put(url, alumno, {
                 headers: {
-                    Authorization: `Bearer ` + service.token,
+                    'Content-Type': 'application/json',
+                    'Authorization': `bearer ${token}`,
                 },
             }).then(response =>{
-                alumnos = response.data;
-                resolve(alumnos);
+                resolve(response);
             })
         })
     }

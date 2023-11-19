@@ -36,5 +36,5 @@
 </script>
 
 <style>
-    @import "./../assets/css/estilocomics.css";
+    @import "./../assets/css/estilocomics.css";º
 </style>

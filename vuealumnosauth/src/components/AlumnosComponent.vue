@@ -2,7 +2,7 @@
   <div>
     <h1>Crud Alumnos Auth</h1>
     <img src="./../assets/images/gifload.gif"
-        v-if="status == false" />
+        v-if="status == true" />
     <table v-else class="table table-bordered">
         <thead>
             <tr>
@@ -53,17 +53,20 @@ import Global from '@/Global';
             
         },
         methods: {
-            async getAlumnosConToken(token) {
+            getAlumnosConToken(token) {
+                console.log(token);
             try {
                 var request = "api/alumnos/alumnostoken";
                 var url = Global.apiUrls + request;
-                const response = axios.get(url, {
+                axios.get(url, {
                     headers: {
-                        Authorization: "bearer " + token,
+                        'Content-Type': 'application/json',
+                        'Authorization': `bearer ${token}`,
                     },
-                });
+                }).then(response =>{
+                    this.alumnos = response.data;
+                })
 
-                this.alumnos = response.data;
             } catch (error) {
                 console.error('Error al obtener alumnos con token:', error);
             }

@@ -40,7 +40,8 @@ import Global from '@/Global';
                         console.log("Token:", token);
 
                         // Almacena el token en el localStorage
-                        localStorage.setItem("response", token);
+                        // y el nombre que le pones es el mismo en los dos componentes
+                        localStorage.setItem("token", token);
 
                         // Redirige a la página que requiere el token
                         this.$router.push('/alumnos');
@@ -49,7 +50,8 @@ import Global from '@/Global';
                     }
                 } catch (error) {
                     console.error('Error en el login:', error);
-                    // Puedes manejar el error aquí, por ejemplo, mostrar un mensaje de error al usuario.
+                    // Puedes manejar el error aquí, por ejemplo,
+                    // mostrar un mensaje de error al usuario.
                 }
             },
         },
